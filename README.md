@@ -32,29 +32,15 @@ The provided project files contained several errors that needed to be found and 
 
 ## 🐞 Errors Fixed
 
-1. Renamed `chat.php` to `gemini.php` because the word `chat` caused a 403 Forbidden error on InfinityFree.
+1. Renamed `chat.php` to `gemini.php` because the word `chat` caused an error on InfinityFree.
 
-2. Corrected the PHP file path in `app.js`:
+2. Corrected the `chat.php` path in `app.js` from `const BACKEND_URL = "api/chat.php";` to `const BACKEND_URL = "gemini.php";` because there is no `api` folder, all the files are in the same folder, and `chat.php` was renamed to `gemini.php`.
 
-```javascript
-const BACKEND_URL = "gemini.php";
-```
+3. Corrected the `config.php` path in `gemini.php` from `require __DIR__ . '/../config.php';` to `require __DIR__ . '/config.php';` because `../` refers to the parent folder, while `config.php` and `gemini.php` are located in the same folder.
 
-3. Corrected the `config.php` path inside `gemini.php`:
+4. Added the Gemini API key to the server version of the `config.php` file.
 
-```php
-require __DIR__ . '/config.php';
-```
-
-4. Added the Gemini API key to the server version of `config.php`.
-
-5. Updated the outdated Gemini model to a working model.
-
----
-
-## 🔄 How It Works
-
-`Microphone` → `Speech Recognition` → `app.js` → `gemini.php` → `Google Gemini API` → Displayed and Spoken Response
+5. Updated the Gemini model from the outdated `gemini-2.0-flash` to a working model `gemini-3.6-flash`.
 
 ---
 
@@ -66,13 +52,7 @@ require __DIR__ . '/config.php';
 - Fetch API
 - PHP
 - Google Gemini API
-- Web Speech API
 - InfinityFree
 
 No external framework was used.
 
----
-
-## 🔐 Security Note
-
-The real Gemini API key is not included in the public GitHub repository.
