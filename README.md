@@ -18,6 +18,7 @@ A web-based voice chatbot that allows users to speak through the microphone, com
 
 [▶️ Watch the Voice Chatbot Demonstration](video.mp4)
 > ⚠️ I spoke to the chatbot during the demonstration, but my voice was muted in the video.
+
 The video shows the final result when I spoke to the chatbot and received a spoken response.
 
 ---
