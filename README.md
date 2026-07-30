@@ -40,7 +40,7 @@ The provided project files contained several errors that needed to be found and 
 
 4. Added the Gemini API key to the server version of the `config.php` file.
 
-5. Updated the Gemini model from the outdated `gemini-2.0-flash` to a working model `gemini-3.6-flash`.
+5. Updated the Gemini model from the outdated model `gemini-2.0-flash` to a working model `gemini-3.6-flash`.
 
 ---
 
